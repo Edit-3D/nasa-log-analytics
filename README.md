@@ -60,7 +60,7 @@ separately.
 Clone the repository:
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/Edit-3D/nasa-log-analytics.git
 cd nasa-log-analytics
 ```
 
