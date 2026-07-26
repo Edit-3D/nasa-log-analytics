@@ -1,5 +1,7 @@
 # NASA Web Log Analytics
 
+[![CI](https://github.com/Edit-3D/nasa-log-analytics/actions/workflows/ci.yml/badge.svg)](https://github.com/Edit-3D/nasa-log-analytics/actions/workflows/ci.yml)
+
 A data engineering project that parses NASA Apache web server logs and analyzes
 them using both standard Python and PySpark. It demonstrates how an in-memory
 workflow can be translated into distributed DataFrame operations.
@@ -116,9 +118,3 @@ jupyter notebook notebooks/analysis_demo.ipynb
 
 The notebook reuses the standard-Python parser and analytics functions, then
 presents the results with pandas and matplotlib.
-
-## License
-
-This project is provided for educational and portfolio purposes. Refer to the
-original dataset source for licensing or redistribution restrictions affecting
-the NASA access log.
