@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nasa-log-analytics"
+version = "0.1.0"
+description = "Python and PySpark analysis of NASA web-server logs."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+notebooks = [
+    "jupyter>=1.0",
+    "matplotlib>=3.7",
+    "pandas>=2.0",
+]
+spark = ["pyspark>=3.5,<4.0"]
+dev = [
+    "pytest>=8.0",
+    "ruff>=0.5",
+]
+
+[project.scripts]
+nasa-log-analysis = "nasa_log_analytics.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+[tool.ruff]
+target-version = "py310"
+line-length = 88
+extend-exclude = [
+    "data",
+    "notebooks",
+    "outputs",
+    "src/*.egg-info",
+]
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I"]
